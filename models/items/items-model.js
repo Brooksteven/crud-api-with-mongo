@@ -31,3 +31,4 @@ const Item = mongoose.model('Item', itemSchema) //this needs to be a reference s
 export default Item; 
 
 //you can also do export { Item }. You can also add export in front of const Item like this: export const Item = mongoose.model('Item', itemSchema)
+//now create router
