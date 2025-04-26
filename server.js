@@ -1,5 +1,6 @@
 //STEP 1 
 import { config } from 'dotenv'; config(); //this is allowing the use of environment variables coming from a .env file
+import './database/database.js'; //import the module into server.js
 import express from 'express'; //this is importing the express package
 
 const app = express(); //this initializing a new backend express app
@@ -23,6 +24,9 @@ app.listen(PORT, (req, res) => {
 });
 
 //now test ABT (always be testing)
+//npm run dev
+
+//Once we see that it's running we can now incorporate the connection to the database next
 
 
 
