@@ -1,4 +1,6 @@
 import express from 'express';
+import * as itemsController from '../../controllers/items/items-controller.js' // import * = imports everything and puts it inside a itemsController object, so to access those imports we have to access it through itemsController object and we access things inside an object by doing . notation (i.e. .seedsItems)
+
 
 const router = express.Router();
 
