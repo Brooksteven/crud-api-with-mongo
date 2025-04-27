@@ -29,8 +29,39 @@ async function seedItems(req, res) {
     }
 }
 
+
+// Now we are creating another function called items //
+// function for INDEX
+
+async function getItems(req, res){
+    try {
+        const items = await Item.find({}); //here we are finding all the items
+        res.status(200).json(items); // here we share what we find with the clients.
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
+
+// function for CREATE 
+async function createItem(req, res){
+    try {
+        //if was using a boolean like readyToEat you would need to account for the checkbox by doing this = req.body.readyToEat === 'on' ? req.body.readyToEat = true : req.body.readyToEat = false; 
+        const item = await Item.create(req.body);
+        console.log(item);
+        res.status(201).json(item); //send the item created back as a response
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
+
+
+
 //export controller function
 
 export {
-    seedItems
+    seedItems,
+    getItems,
+    createItem
 }
