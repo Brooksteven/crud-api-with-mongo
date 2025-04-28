@@ -14,7 +14,7 @@ async function seedItems(req, res) {
            qty: '1'
         },
         {
-           name: 'Element Linen Tube Top',
+           name: 'Eleta Linen Maxi Dress',
            color: 'Sundried Olive',
            qty: '1'
         },
@@ -22,6 +22,11 @@ async function seedItems(req, res) {
            name: 'Little Cropped Jacket',
            color: 'Smoky Sage',
            qty: '1'
+        },
+        {
+            name: '90s Slit Midi Dress',
+            color: 'Dew Blue',
+            qty: '1'  
         }
      );
      res.status(201).redirect('/items'); //created = 201. we redirect the user back to /items because /items is the index route where we can see all the items

@@ -35,21 +35,21 @@ router.get('/', itemsController.getItems);
 router.get('/new', itemsController.renderNewForm)
 
 
-// Delete
-router.delete('/:id', itemsController.deleteItem)
+// // Delete
+// router.delete('/:id', itemsController.deleteItem)
 
-// Update
-router.put('/:id', itemsController.updateItem);
+// // Update
+// router.put('/:id', itemsController.updateItem);
 
 // Create
 router.post('/', itemsController.createItem);
 
 
-// Edit
-router.get('/:id', itemsController.renderEditForm);
+// // Edit
+// router.get('/:id', itemsController.renderEditForm);
 
-//Show
-router.get('/:id', itemsController.getFruit);
+// //Show
+// router.get('/:id', itemsController.getFruit);
 
 
 export default router;

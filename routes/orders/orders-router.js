@@ -26,8 +26,8 @@ router.get('/', ordersController.getOrders);
 router.post('/', ordersController.createOrder);
 
 
-// Edit
-router.get('/:id', ordersController.renderEditForm);
+// // Edit
+// router.get('/:id', ordersController.renderEditForm);
 
 
 //Show

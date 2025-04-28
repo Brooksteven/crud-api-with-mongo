@@ -3,6 +3,8 @@ import { config } from 'dotenv'; config(); //this is allowing the use of environ
 import './database/database.js'; //import the module into server.js
 import express from 'express'; //this is importing the express package
 import itemsRouter from './routes/items/items-router.js';
+import ordersRouter from './routes/orders/orders-router.js';
+import usersRouter from './routes/users/users-router.js';
 
 const app = express(); //this initializing a new backend express app
 const PORT = process.env.PORT || 3001; // This is conditional assignment. PORT conditionall is being assigned a value that comes from our PORT environment variable, if it doesn't find it, set it to 3001 instead
@@ -15,6 +17,7 @@ app.use(express.urlencoded({ extended: true })); //this allows us to have a req.
 app.use(express.json());//this allows us to have a req.body whenever json data is submitted directly without a form, coming from reqbin or postman etc
 app.use('/items', itemsRouter); //this is saying for all routes that start with /items look for them in itemsRouter
 app.use('/orders', ordersRouter);
+app.use('/users', usersRouter);
 
 //define a base route
 app.get('/', (req, res) => {
