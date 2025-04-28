@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3001; // This is conditional assignment. PORT c
 app.use(express.urlencoded({ extended: true })); //this allows us to have a req.body for whatever forms are submitted
 app.use(express.json());//this allows us to have a req.body whenever json data is submitted directly without a form, coming from reqbin or postman etc
 app.use('/items', itemsRouter); //this is saying for all routes that start with /items look for them in itemsRouter
+app.use('/orders', ordersRouter);
 
 //define a base route
 app.get('/', (req, res) => {
