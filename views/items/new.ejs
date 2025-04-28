@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Item</title>
+</head>
+<body>
+    <!-- Right now the app is for employees adding clothes to the site, but later we will turn it to a ecommerce site -->
+    <h1>Create a New Item!</h1>
+    <form action="/items" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+
+        <label for="color">Color: </label>
+        <input type="text" name="color" id="color">
+
+        <label for="qty">Quantity: </label>
+        <input type="text" name="qty" id="qty">
+
+        <!-- If we were doing a boolean or checkbox this is how it would look. An exmaple can be like "Favorites" and you can clicke the heart-->
+        <!-- <label for="readyToEat">Ready to eat?</label>
+        <input type="checkbox" name="readyToEat" id="readyToEat"> -->
+
+        <button type="submit">Add Item</button>
+    </form>
+</body>
+</html>

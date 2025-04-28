@@ -7,6 +7,9 @@ import itemsRouter from './routes/items/items-router.js';
 const app = express(); //this initializing a new backend express app
 const PORT = process.env.PORT || 3001; // This is conditional assignment. PORT conditionall is being assigned a value that comes from our PORT environment variable, if it doesn't find it, set it to 3001 instead
 
+//by default I don't have to do app.set('views', 'views') and then specifiy the name of the folder, by default, it knows that the folder where your views are is called views. However if I change the 'views' folder so something else then I would need to do this and specifiy the folder name for example: app.set('views', 'NEW_FOLDER_NAME_HERE'); 
+// app.set('views', 'views');
+
 
 app.use(express.urlencoded({ extended: true })); //this allows us to have a req.body for whatever forms are submitted
 app.use(express.json());//this allows us to have a req.body whenever json data is submitted directly without a form, coming from reqbin or postman etc

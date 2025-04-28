@@ -27,22 +27,29 @@ router.get('/seed', itemsController.seedItems) //instead of defining a callback 
 ///// INDUCES /////
 
 
-// Index
+// Index (Step 1 when building a route)
 router.get('/', itemsController.getItems);
 
 
 // New
+router.get('/new', itemsController.renderNewForm)
 
 
 // Delete
-
+router.delete('/:id', itemsController.deleteItem)
 
 // Update
+router.put('/:id', itemsController.updateItem);
 
-
-//Create
+// Create
 router.post('/', itemsController.createItem);
 
+
+// Edit
+router.get('/:id', itemsController.renderEditForm);
+
+//Show
+router.get('/:id', itemsController.getFruit);
 
 
 export default router;
