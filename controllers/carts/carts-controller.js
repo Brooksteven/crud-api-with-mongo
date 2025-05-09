@@ -63,7 +63,7 @@ async function getCarts(req, res){
 async function deleteCart(req, res){
     try {
         const cart = await Cart.findByIdAndDelete(req.params.id);
-        res.status(200).json(cart);
+        res.status(200).json(cart); 
     } catch (error) {
         res.status(400).json({ error: error.message })
     }
@@ -93,6 +93,8 @@ async function createCart(req, res){
         res.status(400).json({ error: error.message })
     }
 }
+
+
 
 
 // funciton for New

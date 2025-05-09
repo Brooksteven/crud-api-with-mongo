@@ -6,6 +6,7 @@ import mongoose from 'mongoose'; //import mongoos so we can use mongoose to esat
 mongoose.connect(process.env.MONGO_URI); //here we establish the connection to mongoDB. This creates the connection
 
 //here is how we track the connection that we created. Once the connection is open i.e. the connection is successful then we execute the callback function stating that we are connected
+//once the connection is open it will connect to the mongodb database
 mongoose.connection.once('open', () => {
-    console.log(`MongoDB Connected: ${mongoose.connection.name}`); //mongoose.connection.name list out the database we are connected to
+    console.log(`MongoDB Connected to: ${mongoose.connection.name}`); //mongoose.connection.name list out the database we are connected to
 });

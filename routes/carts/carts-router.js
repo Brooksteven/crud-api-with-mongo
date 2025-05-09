@@ -49,7 +49,7 @@ router.post('/', cartsController.createCart);
 // router.get('/:id', itemsController.renderEditForm);
 
 // //Show
-router.get('/:id', cartsController.getCart);
+router.get('/:id', cartsController.getCarts); //why is this plural
 
 
 export default router;
