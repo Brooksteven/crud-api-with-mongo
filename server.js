@@ -21,7 +21,7 @@ app.use(express.json());//this allows us to have a req.body whenever json data i
 app.use('/items', itemsRouter); //this is saying for all routes that start with /items look for them in itemsRouter
 app.use('/orders', ordersRouter);
 app.use('/users', usersRouter);
-app.use('./carts', cartsRouter)
+app.use('/carts', cartsRouter)
 
 //define a base route
 app.get('/', (req, res) => {
